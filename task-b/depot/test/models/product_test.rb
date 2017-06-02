@@ -1,3 +1,8 @@
+class ProductTest < ActiveSupport :: TestCase
+  fixtures :products
+  #...
+end
+
 test "product price must be positive" do
   product = Product.new(title: "My Book Title",
     description: "yyy",
@@ -31,5 +36,5 @@ ok.each do |name|
 end
   bad.each do |name|
     assert new_product(name).invalid?, "#{name} shouldn't be valid"
-  end 
+  end
 end
