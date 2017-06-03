@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class StoreController < ApplicationController
   def new
   end
 
@@ -16,6 +16,6 @@ end
     redirect_to store_index_url, notice: "Logged out"
   end
 
-class SessionsController < ApplicationController
+class StoreController < ApplicationController
   skip_before_action :authorize
 end
