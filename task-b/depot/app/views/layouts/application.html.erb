@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
 
     <%= csrf_meta_tags %>
+
     <%= stylesheet_link_tag 'application', media: 'all',
     'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -25,7 +26,8 @@
     <ul>
       <li><a href="http://www....">Home</a></li>
       <li><a href="http://www..../faq">Questions</a></li>
-      <li><a href="http://www..../news">News</a></li> <li><a href="http://www..../contact">Contact</a></li>
+      <li><a href="http://www..../news">News</a></li>
+      <li><a href="http://www..../contact">Contact</a></li>
     </ul>
 
     <% if session[:user_id] %>
@@ -37,7 +39,8 @@
     <%= button_to 'Logout', logout_path, method: :delete %> <% end %>
   </div>
   <div id="main">
-    <%= yield %> </div>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

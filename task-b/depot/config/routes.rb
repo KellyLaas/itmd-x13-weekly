@@ -8,7 +8,7 @@ Rails.application.routes.draw do
    end
 
    resources :users
-   esources :orders
+   resources :orders
    resources :line_items
    resources :carts
    root 'store#index', as: 'store_index'

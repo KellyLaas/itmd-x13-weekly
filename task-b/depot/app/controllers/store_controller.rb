@@ -21,7 +21,3 @@ end
     session[:user_id] = nil
     redirect_to store_index_url, notice: "Logged out"
   end
-
-class StoreController < ApplicationController
-  skip_before_action :authorize
-end
