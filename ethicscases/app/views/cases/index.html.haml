@@ -1,0 +1,16 @@
+<h1>Listing articles</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+  <% @cases.each do |article| %>
+    <tr>
+      <td><%= case.title %></td>
+      <td><%= case.abstract %></td>
+      <td><%= link_to 'Show', case_path(case) %></td>
+    </tr>
+  <% end %>
+</table>
