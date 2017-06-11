@@ -3,7 +3,7 @@ class CreateCases < ActiveRecord::Migration[5.1]
     create_table :cases do |t|
       t.string :author
       t.string :year
-      t.string :abstract
+      t.text :abstract
       t.string :subject
       t.string :subject
       t.string :title
