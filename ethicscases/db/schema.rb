@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170611142229) do
+ActiveRecord::Schema.define(version: 20170612145622) do
 
   create_table "authors", force: :cascade do |t|
     t.string "first_name"
@@ -19,9 +19,21 @@ ActiveRecord::Schema.define(version: 20170611142229) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "authors_cases", id: false, force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.integer "case_id", null: false
+  end
+
   create_table "authors_subjects", id: false, force: :cascade do |t|
     t.integer "author_id", null: false
     t.integer "subject_id", null: false
+  end
+
+  create_table "case_subjects", force: :cascade do |t|
+    t.integer "case_id"
+    t.integer "subject_id"
+    t.index ["case_id"], name: "index_case_subjects_on_case_id"
+    t.index ["subject_id"], name: "index_case_subjects_on_subject_id"
   end
 
   create_table "cases", force: :cascade do |t|
