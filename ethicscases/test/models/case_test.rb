@@ -3,10 +3,10 @@ require 'test_helper'
 class CaseTest < ActiveSupport::TestCase
   def new_case
     Case.new(title: "My Case Title",
-              year: "yyyy",
-              author: "yyy",
-              abstract: "yyyy",
-              subject: "yyy")
+              year: "1984",
+              author: "Peggy Connelly",
+              abstract: "Bad stuff happens",
+              subject: "whistleblowing")
     end
 
   test "should have a title" do
