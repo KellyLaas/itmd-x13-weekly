@@ -1,12 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  year: MyString
-  abstract: MyText
+  title: What a day
+  year: 1999
+  abstract: Student gets sucked down a whirlpool
 
 
 two:
-  title: MyString
-  year: MyString
-  abstract: MyText
+  title: Slavedriving PI
+  year: 2017
+  abstract: Student asked to work over all weekends in a year
