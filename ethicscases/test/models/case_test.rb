@@ -7,9 +7,8 @@ class CaseTest < ActiveSupport::TestCase
               abstract: "yyyy")
   end
 
-  test "should have a title, year and abstract" do
+  test "should not save case without a title" do
     test_case = Case.new
-    assert test_case.invalid?
-    assert test_case.errors[:title].any?
+    assert_not test_case.save, "Saved case without a title"
   end
 end
