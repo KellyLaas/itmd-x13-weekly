@@ -11,4 +11,14 @@ class CaseTest < ActiveSupport::TestCase
     test_case = Case.new
     assert_not test_case.save, "Saved case without a title"
   end
+
+  test "should not save case without a year" do
+    test_case = Case.new
+    assert_not test_case.save, "Saved case without a year"
+  end
+
+  test "should not save case without a subject" do
+    test_case = Case.new
+    assert_not test_case.save, "Saved case without a subject"
+  end
 end
