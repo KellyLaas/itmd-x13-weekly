@@ -14,4 +14,16 @@ class CaseTest < ActiveSupport::TestCase
     assert test_case.invalid?
     assert test_case.errors[:title].any?
   end
+
+  test "should have a abstract" do
+    test_case = Case.new
+    assert test_case.invalid?
+    assert test_case.errors[:abstract].any?
+  end
+
+  test "should have a year" do
+    test_case = Case.new
+    assert test_case.invalid?
+    assert test_case.errors[:year].any?
+  end
 end
