@@ -10,4 +10,8 @@ def add_product(product)
     current_item = line_items.build(product_id: product_id)
   end
   current_item
+end
+
+def total_price
+  line_item.to_a.sum { |item| item.total_price }
 end 
