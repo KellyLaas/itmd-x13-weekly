@@ -54,8 +54,17 @@ class ProductsController < ApplicationController
       format.json { render json: @product.errors,
         status: :unprocessable_entity }
     end
-  end
-end
+
+    def who_bought
+      @product = Product.find(params[:id])
+      @latest_order = @product.orders.order(:updated_at).last
+      if stale?(@latest_order)
+        respond_to do |format|
+          format.atom
+        end
+      end
+    end
+  end 
 
   # DELETE /products/1
   # DELETE /products/1.json
