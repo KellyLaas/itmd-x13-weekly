@@ -21,16 +21,6 @@ class CartsController < ApplicationController
   def edit
   end
 
-  def destroy
-    @cart.destroy if @cart.id == session[:cart_id]
-    session[:cart_id] = nil
-    respond_to do |format|
-      format.html { redirect_to store_index_url }
-      format.json { head :no_content }
-    end
-  end
-
-
   # POST /carts
   # POST /carts.json
   def create
@@ -71,8 +61,11 @@ class CartsController < ApplicationController
     end
   end
 
+
+  #...
   private
-    # Use callbacks to share common setup or constraints between actions.
+  #...
+
     def set_cart
       @cart = Cart.find(params[:id])
     end
@@ -81,9 +74,8 @@ class CartsController < ApplicationController
     def cart_params
       params.fetch(:cart, {})
     end
-
     def invalid_cart
       logger.error "Attempt to access invalid cart #{params[:id]}"
       redirect_to store_index_url, notice: 'Invalid cart'
     end
-  end
+end
