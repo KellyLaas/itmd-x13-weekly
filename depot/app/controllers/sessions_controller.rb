@@ -1,8 +1,10 @@
 class SessionsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def new
   end
 
   def create
+    @provider_response= request.env['omniauth.auth']
     user = User.find_by(name: params[:name])
     if user.try(:authenticate, params[:password])
       session[:user_id] = user.id
