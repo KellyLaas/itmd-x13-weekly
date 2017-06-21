@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  post 'auth/:provider/callback', to: 'sessions#create'
-  
+  match 'auth/:provider/callback', to: 'sessions#create', via: [:post,:get]
+
   get 'sessions/create'
 
   get 'sessions/destroy'
