@@ -14,5 +14,6 @@ class SessionsController < ApplicationController
   end
 
   def logout
-  end 
+    redirect_to login_url, notice: 'You have been logged out'
+  end
 end
