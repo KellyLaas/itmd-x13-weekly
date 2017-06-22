@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'user/uid'
+
+  get 'user/name'
+
+  get 'user/email'
+
+  get 'user/image_url'
+
   resources :orders
   resources :line_items
   resources :carts
