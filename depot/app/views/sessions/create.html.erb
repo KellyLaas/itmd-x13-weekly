@@ -1,7 +1,6 @@
-<pre>
-<%= "Welcome, #{@provider_response['info']['name']}" %>
-</pre>
-
-<pre>
-<%= @provider_response.inspect %>
-</pre>
+<ul>
+  <%= li= @user.uid %>
+  <%= li= @user.name %>
+  <%= li= @puser.email %>
+  <%= li= image_tag @user.image.url %>
+</ul>
