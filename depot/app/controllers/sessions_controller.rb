@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def login
   end
-  
+
   def create
     auth_hash = request.env['omniauth.auth']
     @user = User.find_or_create_by(uid: auth_hash['uid']) do |user|
@@ -12,4 +12,7 @@ class SessionsController < ApplicationController
       user.image_url = auth_hash['info']['image']
     end
   end
+
+  def logout
+  end 
 end
