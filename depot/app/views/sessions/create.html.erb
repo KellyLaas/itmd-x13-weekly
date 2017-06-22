@@ -1,8 +1,7 @@
-<ul>
-  <%= li= @provider_response['uid'] %>
-  <%= li= @provider_response['info']['name'] %>
-  <%= li= @provider_response['info']['email'] %>
-  <%= li= @provider_response['info']['image'] %>
+<pre>
+<%= "Welcome, #{@provider_response['info']['name']}" %>
+</pre>
 
-<%= pre= @provider_response['info'].inspect %>
-</ul>
+<pre>
+<%= @provider_response.inspect %>
+</pre>
