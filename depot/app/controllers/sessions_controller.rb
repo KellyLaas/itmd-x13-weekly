@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
       user.email = auth_hash['info']['email']
       user.image_url = auth_hash['info']['image']
     end
+    self.current_user = @user
   end
 
   def logout
