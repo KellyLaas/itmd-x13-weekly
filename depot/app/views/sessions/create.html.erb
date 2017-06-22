@@ -1,8 +1,16 @@
 <ul>
-  <%= li= @user.uid %>
-  <%= li= @user.name %>
-  <%= li= @user.email %>
-  <%= li= image_tag @user.image.url %>
+  <li>
+    <%= @user.uid %>
+  </li>
+  <li>
+    <%= @user.name %>
+  </li>
+  <li>
+    <%= @user.email %>
+  </li>
+  <li>
+    <%= image_tag @user.image_url %>
+  </li>
 </ul>
 
 <p>
