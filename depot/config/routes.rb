@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   root 'store#index', as: 'store_index'
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:post,:get]
-  get 'login', to: 'sessions#login', as: 'login'
-  get 'logout', to: 'sessions#logout', as: 'logout'
-  get 'auth/github', as: 'github_login'
+
 
   resources :products do
     get :who_bought, on: :member
