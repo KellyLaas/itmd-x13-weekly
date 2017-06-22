@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :carts
   root 'store#index', as: 'store_index'
 
+  post 'auth/:provider/callback', to: 'sessions#create'
+
   resources :products do
     get :who_bought, on: :member
   end
